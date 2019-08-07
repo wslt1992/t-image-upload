@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <base-upload-photo v-model="imgObj"></base-upload-photo>
+    <div style="word-wrap:break-word;text-align: left"><span>imgObj:{{imgObj}}</span></div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import BaseUploadPhoto from './upload/BaseUploadPhoto'
 
 export default {
   name: 'home',
+  data () {
+    return {
+      imgObj: ''
+    }
+  },
+  methods: {
+  },
   components: {
-    HelloWorld
+    BaseUploadPhoto
   }
 }
 </script>
